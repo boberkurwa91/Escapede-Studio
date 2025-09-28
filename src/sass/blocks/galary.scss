@@ -11,9 +11,22 @@
     }
     &__grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: [first] 1fr ;
         gap: 10px;
         margin-top: 20px;
+        object-fit: cover;
     }
   
+}
+
+@media  screen and (min-width: 768px) {
+    .galary {
+        &__grid {
+            display: grid;
+            grid-template-columns: [first] 1fr [second] 1fr ;
+            gap: 10px;
+            margin-top: 20px;
+        }
+    }
+    
 }
